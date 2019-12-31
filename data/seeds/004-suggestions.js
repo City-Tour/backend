@@ -192,6 +192,101 @@ exports.seed = function(knex) {
           address: '1516 Broadway, San Francisco, CA 94109',
           website: 'https://www.berbersf.com/',
           package_id: 6
+        },
+
+        /* === AUSTIN SEED DATA === */
+
+        {
+          suggestion_id: 19,
+          name: 'Zilker Botanical Garden',
+          type: 'attraction',
+          description:
+            'The Zilker Botanical Garden is a botanical garden of varied topography located on the south bank of the Colorado River at 2220 Barton Springs Road, near downtown Austin, Texas, United States. The Botanical Garden was established as a non-profit organization in 1955, and is the centerpiece of Zilker Park.',
+          address: '2220 Barton Springs Rd, Austin, TX 78746',
+          website: 'http://www.zilkergarden.org/',
+          package_id: 7
+        },
+        {
+          suggestion_id: 20,
+          name: 'Penny Lane Street Bar',
+          type: 'entertainment',
+          description:
+            'Penny Lane is a downtown Austin cocktail bar featuring live music, karaoke, and signature drinks. Join us for a premium bar experience blending classic and modern in bold colors and a unique ambiance.',
+          address: '115B San Jacinto Blvd, Austin, TX 78701',
+          website: 'pennylanetx.com',
+          package_id: 7
+        },
+        {
+          suggestion_id: 21,
+          name: 'Franklin Barbecue',
+          type: 'food',
+          description:
+            'Long lines form early for brisket, pulled pork & other smoked meats at this lunch-only spot.',
+          address: '900 E 11th St, Austin, TX 78702',
+          website: 'franklinbarbecue.com',
+          package_id: 7
+        },
+
+        {
+          suggestion_id: 22,
+          name: 'Austin Zoo',
+          type: 'attraction',
+          description:
+            'Austin Zoo is a non-profit rescue zoo and located in southwestern unincorporated Travis County, Texas, United States, west of Austin. The mission of Austin Zoo is to assist animals in need through rescue, rehabilitation, and education.',
+          address: '10808 Rawhide Trail, Austin, TX 78736',
+          website: 'http://www.austinzoo.org/',
+          package_id: 8
+        },
+        {
+          suggestion_id: 23,
+          name: 'The Hideout Theatre',
+          type: 'entertainment',
+          description:
+            'Snug comedy club featuring seasoned & up-and-coming talent, plus a coffee shop for drinks & snacks.',
+          address: '617 Congress Ave, Austin, TX 78701',
+          website: 'http://www.hideouttheatre.com/',
+          package_id: 8
+        },
+        {
+          suggestion_id: 24,
+          name: 'Veracruz All Natural Food Truck',
+          type: 'food',
+          description:
+            'Simple trailer with picnic tables for tacos with spit-grilled meats or veggie options, plus migas.',
+          address: '1704 E Cesar Chavez St, Austin, TX 78702',
+          website: 'veracruzallnatural.com',
+          package_id: 8
+        },
+
+        {
+          suggestion_id: 25,
+          name: 'McKinney Falls State Park',
+          type: 'attraction',
+          description:
+            'McKinney Falls State Park is a state park in Austin, Texas, United States at the confluence of Onion Creek and Williamson Creek. It is administered by the Texas Parks and Wildlife Department.',
+          address: '5808 McKinney Falls Pkwy, Austin, TX 78744',
+          website: 'https://tpwd.texas.gov/state-parks/mckinney-falls',
+          package_id: 9
+        },
+        {
+          suggestion_id: 26,
+          name: 'Cactus Cafe',
+          type: 'entertainment',
+          description:
+            'The Cactus Café is a live music venue and bar on the campus of The University of Texas at Austin.[1] Located in Austin, Texas, a city frequently referred to as "the live music capital of the world," a number of well-known artists have played in the Cactus, and Billboard Magazine named it as one of fifteen "solidly respected, savvy clubs" in the United States, "from which careers can be cut, that work with proven names and new faces',
+          address: '2247 Guadalupe St, Austin, TX 78712',
+          website: 'https://cactuscafe.org/',
+          package_id: 9
+        },
+        {
+          suggestion_id: 27,
+          name: 'DEE DEE - Northern Thai Street Food',
+          type: 'food',
+          description:
+            'Northern Thai specialties featuring market-fresh ingredients from a food trailer with picnic tables.',
+          address: '4204 Manchaca Rd, Austin, TX 78745',
+          website: 'https://www.deedeeatx.com/',
+          package_id: 9
         }
       ])
     })
