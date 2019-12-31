@@ -29,6 +29,23 @@ router.get('/:package_id', async (req, res) => {
   }
 })
 
+/*=== READ ALL PACKAGES BY CITY_ID ===*/
+router.get('/city/:city_id', async (req, res) => {
+  const { city_id } = req.params
+
+  try {
+    // SELECT * FROM 'packages' AS p INNER JOIN 'cities' AS 'c' ON p.city_id == cities.city_id
+    const city_packages = await db('packages')
+      .join('cities', 'packages.city_id', 'cities.city_id')
+      .select('*')
+      .where('cities.city_id', city_id)
+
+    res.status(200).json(city_packages)
+  } catch (err) {
+    res.status(500).json(err.message)
+  }
+})
+
 /*=== CREATE PACKAGES ===*/
 router.post('/', async (req, res) => {
   const { name, type, description, price, city_id, creator_id } = req.body
