@@ -54,7 +54,7 @@ router.put('/', async (req, res) => {
 })
 
 /*=== DELETE SUGGESTION ===*/
-router.delete('/:suggestions_id', async (req, res) => {
+router.delete('/:suggestion_id', async (req, res) => {
   const { suggestion_id } = req.params
 
   try {
