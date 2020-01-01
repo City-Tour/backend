@@ -16,6 +16,7 @@ const citiesRouter = require('../routers/citiesRouter')
 const stripeRouter = require('../routers/stripeRouter')
 const packagesRouter = require('../routers/packagesRouters')
 const suggRouter = require('../routers/suggestionsRouter')
+const authenticate = require('../middleware/authenticate')
 
 const server = express()
 
