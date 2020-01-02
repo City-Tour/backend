@@ -5,6 +5,8 @@ exports.up = function(knex) {
     tbl.string('type', 255).notNullable()
     tbl.string('decription', 255).notNullable()
     tbl.decimal('price').notNullable()
+    tbl.string('city_id', 255).notNullable()
+    tbl.foreign('city_id').references('cities.id')
     tbl.integer('creator_id')
     tbl.foreign('creator_id').references('users.id')
   })
