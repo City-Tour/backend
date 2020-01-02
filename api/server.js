@@ -2,7 +2,11 @@ const express = require('express')
 const helmet = require('helmet')
 const cors = require('cors')
 
+
 /*=== import routers here ===*/
+
+const authRouter = require("../routers/authRouter")
+
 
 const server = express()
 
@@ -13,5 +17,7 @@ server.get('/', (req, res) => {
 })
 
 /*=== routers implemented here ===*/
+
+server.use("/", authRouter)
 
 module.exports = server
