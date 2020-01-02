@@ -10,6 +10,7 @@ const stripe = require('stripe')('sk_test_kha5ImDj5h2LzUgfR9Nit2Jx00pkmiYScQ')
 
 /*=== import routers here ===*/
 
+/*=== import routers here ===*/
 const authRouter = require('../routers/authRouter')
 
 const server = express()
@@ -37,7 +38,6 @@ server.post('/charge', async (req, res) => {
 })
 
 /*=== routers implemented here ===*/
-
 server.use('/', authRouter)
 
 module.exports = server
