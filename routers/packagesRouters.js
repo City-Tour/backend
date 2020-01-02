@@ -40,12 +40,19 @@ router.post('/', async (req, res) => {
 
 /*=== UPDATE PACKAGES ===*/
 router.put('/', async (req, res) => {
-    //
+    // optional
 })
 
 /*=== DELETE PACKAGES ===*/
-router.delete('/', async (req, res) => {
-    //
+router.delete('/:id', async (req, res) => {
+    const { id } = req.params
+
+    try {
+        const deleted = await db('packages').where({ id }).del()
+        res.status(204).json(deleted)
+    } catch (err) {
+        res.status(500).json(err.message)
+    }
 })
 
 module.exports = router
