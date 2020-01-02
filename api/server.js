@@ -2,6 +2,8 @@ const express = require('express')
 const helmet = require('helmet')
 const cors = require('cors')
 
+const authenticate = require('../middleware/authenticate')
+
 /*=== import routers here ===*/
 const authRouter = require('../routers/authRouter')
 const citiesRouter = require('../routers/citiesRouter')
@@ -16,6 +18,6 @@ server.get('/', (req, res) => {
 
 /*=== routers implemented here ===*/
 server.use('/', authRouter)
-server.use('/cities', citiesRouter)
+server.use('/cities', authenticate, citiesRouter)
 
 module.exports = server
