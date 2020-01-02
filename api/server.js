@@ -7,7 +7,8 @@ const authenticate = require('../middleware/authenticate')
 /*=== import routers here ===*/
 const authRouter = require('../routers/authRouter')
 const citiesRouter = require('../routers/citiesRouter')
-const stripeRouter = require("../routers/stripeRouter")
+const stripeRouter = require('../routers/stripeRouter')
+const packagesRouter = require('../routers/packagesRouters')
 
 const server = express()
 
@@ -19,10 +20,8 @@ server.get('/', (req, res) => {
 
 /*=== routers implemented here ===*/
 server.use('/', authRouter)
-server.use('/cities', authenticate, citiesRouter)
+server.use('/cities', citiesRouter)
+server.use('/packages', packagesRouter)
 server.use('/', stripeRouter)
 
 module.exports = server
-
-
-
