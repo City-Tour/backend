@@ -3,8 +3,8 @@ const helmet = require('helmet')
 const cors = require('cors')
 
 /*=== import routers here ===*/
-
 const authRouter = require('../routers/authRouter')
+const citiesRouter = require('../routers/citiesRouter')
 
 const server = express()
 
@@ -15,7 +15,7 @@ server.get('/', (req, res) => {
 })
 
 /*=== routers implemented here ===*/
-
 server.use('/', authRouter)
+server.use('/cities', citiesRouter)
 
 module.exports = server
