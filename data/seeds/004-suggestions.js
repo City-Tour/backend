@@ -19,7 +19,7 @@ exports.seed = function(knex) {
         {
           suggestion_id: 2,
           name: 'Honkey Tonk',
-          type: 'enterntainment',
+          type: 'entertainment',
           description: 'Tootsies',
           address: '422 Broadway, Nashville, TN 37203',
           website: 'http://www.tootsies.net/',
@@ -50,7 +50,7 @@ exports.seed = function(knex) {
         {
           suggestion_id: 5,
           name: 'Wildhorse Saloon',
-          type: 'enterntainment',
+          type: 'entertainment',
           description:
             'Southern food, live-music acts, multiple bars & free nightly dance lessons in a 3-story space.',
           address: '120 2nd Ave N, Nashville, TN 37201',
@@ -81,7 +81,7 @@ exports.seed = function(knex) {
         {
           suggestion_id: 8,
           name: 'Bridgestone Arena',
-          type: 'enterntainment',
+          type: 'entertainment',
           description:
             'Bridgestone Arena is a multi-purpose venue in downtown Nashville, Tennessee, that was completed in 1996, and is the home of the Nashville Predators of the National Hockey League.',
           address: '501 Broadway, Nashville, TN 37203',
