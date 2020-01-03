@@ -5,6 +5,8 @@ exports.seed = function(knex) {
     .then(function() {
       // Inserts seed entries
       return knex('suggestions').insert([
+        /* === NASHVILLE SEED DATA === */
+
         {
           suggestion_id: 1,
           name: 'Grand Ole Opry',
@@ -95,6 +97,101 @@ exports.seed = function(knex) {
           address: '902 Main St, Nashville, TN 37206',
           website: 'butcherandbee.com',
           package_id: 3
+        },
+
+        /* === SAN FRANSISCO SEED DATA === */
+
+        {
+          suggestion_id: 10,
+          name: 'Museum of Ice Cream',
+          type: 'attraction',
+          description: 'Museum of Ice Cream San Francisco',
+          address: '1 Grant Ave, San Francisco, CA 94108',
+          website: 'https://www.museumoficecream.com/',
+          package_id: 4
+        },
+        {
+          suggestion_id: 11,
+          name: 'Gregangelos Velocity Arts & Entertainment',
+          type: 'entertainment',
+          description:
+            'Gregangelo’s Velocity Circus/Arts and Entertainment is a San Francisco-based circus troupe and entertainment company that incorporates the arts, technology, astrophysical concepts and cultural diversity into their performance acts.',
+          address: '225 San Leandro Way, San Francisco, CA 94127',
+          website: 'https://www.velocityartssf.com/',
+          package_id: 4
+        },
+        {
+          suggestion_id: 12,
+          name: 'Brendas French Soul Food',
+          type: 'food',
+          description:
+            'Fresh takes on beignets, po boys & other Big Easy bites draw crowds to this narrow but airy spot.',
+          address: '652 Polk St, San Francisco, CA 94102',
+          website: 'frenchsoulfood.com',
+          package_id: 4
+        },
+
+        {
+          suggestion_id: 13,
+          name: 'Japanese Tea Garden',
+          type: 'attraction',
+          description:
+            'The Japanese Tea Garden in San Francisco, California, is a popular feature of Golden Gate Park, originally built as part of a sprawling Worlds Fair, the California Midwinter International Exposition of 1894.',
+          address: '75 Hagiwara Tea Garden Dr, San Francisco, CA 94118',
+          website: 'https://www.japaneseteagardensf.com/',
+          package_id: 5
+        },
+        {
+          suggestion_id: 14,
+          name: 'Smugglers Cove',
+          type: 'entertainment',
+          description:
+            'Popular bar boasting nautical-themed decor, exotic cocktails & over 700 types of rum.',
+          address: '650 Gough St, San Francisco, CA 94102',
+          website: 'http://www.smugglerscovesf.com/',
+          package_id: 5
+        },
+        {
+          suggestion_id: 15,
+          name: 'Surisan',
+          type: 'food',
+          description:
+            'Industrial-chic spot for classic American breakfast/brunch dishes & modern Korean dinners.',
+          address: '505 Beach St, San Francisco, CA 94133',
+          website: 'surisansf.com',
+          package_id: 5
+        },
+
+        {
+          suggestion_id: 16,
+          name: 'Golden Gate Park',
+          type: 'attraction',
+          description:
+            'Golden Gate Park, located in San Francisco, California, United States, is a large urban park consisting of 1,017 acres of public grounds. It is administered by the San Francisco Recreation & Parks Department, which began in 1871 to oversee the development of Golden Gate Park.',
+          address: 'San Francisco, CA',
+          website:
+            'https://sfrecpark.org/parks-open-spaces/golden-gate-park-guide/',
+          package_id: 6
+        },
+        {
+          suggestion_id: 17,
+          name: 'Bourbon & Branch',
+          type: 'entertainment',
+          description:
+            'Reservations are required at this swanky, dimly lit unmarked bar known for handcrafted cocktails.',
+          address: '501 Jones St, San Francisco, CA 94102',
+          website: 'http://www.bourbonandbranch.com/',
+          package_id: 6
+        },
+        {
+          suggestion_id: 18,
+          name: 'Berber SF',
+          type: 'food',
+          description:
+            'Swanky choice for Moroccan eats, wine & prix-fixe dinners plus live music, dancers & aerialists.',
+          address: '1516 Broadway, San Francisco, CA 94109',
+          website: 'https://www.berbersf.com/',
+          package_id: 6
         }
       ])
     })
