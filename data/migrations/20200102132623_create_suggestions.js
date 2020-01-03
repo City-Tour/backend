@@ -1,6 +1,6 @@
 exports.up = function(knex) {
   return knex.schema.createTable('suggestions', tbl => {
-    tbl.increments()
+    tbl.increments('suggestion_id')
     tbl
       .string('name', 255)
       .unique()
@@ -10,7 +10,7 @@ exports.up = function(knex) {
     tbl.string('address', 255).notNullable()
     tbl.string('website', 255).notNullable()
     tbl.integer('package_id')
-    tbl.foreigh('package_id').references('packages.id')
+    tbl.foreign('package_id').references('packages.package_id')
   })
 }
 

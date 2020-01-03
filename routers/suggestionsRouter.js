@@ -5,7 +5,7 @@ const router = require('express').Router()
 /*=== READ ALL SUGGESTIONS ===*/
 router.get('/', async (req, res) => {
   try {
-    const suggestions = await 'suggestions'
+    const suggestions = await db('suggestions')
     res.status(200).json(suggestions)
   } catch (err) {
     res.status(500).json(err.message)
@@ -18,10 +18,9 @@ router.get('/:package_id', async (req, res) => {
 
   try {
     const package_sugs = await db('packages')
-      .where({ id: package_id })
-      .join('suggestions', 'packages.id', 'suggestions.package_id')
+      .join('suggestions', 'packages.package_id', 'suggestions.package_id')
       .select('*')
-      .where('suggestions.package_id', 'package_id')
+      .where('suggestions.package_id', package_id)
 
       res.status(200).json(package_sugs)
   } catch (err) {

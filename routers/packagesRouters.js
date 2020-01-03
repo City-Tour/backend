@@ -15,13 +15,13 @@ router.get('/', async (req, res) => {
 })
 
 /*=== READ ALL PACKAGES BY PACKAGE_ID ===*/
-router.get('/:id', async (req, res) => {
-  const { id } = req.params
+router.get('/:package_id', async (req, res) => {
+  const { package_id } = req.params
 
   try {
     /*=== unfinished, need to write joint query that gets suggestions too===*/
     const package = await db('packages')
-      .where({ id })
+      .where({ package_id })
       .first()
     res.status(200).json(package)
   } catch (err) {
@@ -47,12 +47,12 @@ router.put('/', async (req, res) => {
 })
 
 /*=== DELETE PACKAGES ===*/
-router.delete('/:id', async (req, res) => {
-  const { id } = req.params
+router.delete('/:package_id', async (req, res) => {
+  const { package_id } = req.params
 
   try {
     const deleted = await db('packages')
-      .where({ id })
+      .where({ package_id })
       .del()
     res.status(204).json(deleted)
   } catch (err) {

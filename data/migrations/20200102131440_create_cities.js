@@ -1,6 +1,6 @@
 exports.up = function(knex) {
   return knex.schema.createTable('cities', tbl => {
-    tbl.increments()
+    tbl.increments('city_id')
     tbl
       .string('city_name', 255)
       .unique()
