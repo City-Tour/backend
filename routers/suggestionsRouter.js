@@ -22,7 +22,7 @@ router.get('/:package_id', async (req, res) => {
       .select('*')
       .where('suggestions.package_id', package_id)
 
-      res.status(200).json(package_sugs)
+    res.status(200).json(package_sugs)
   } catch (err) {
     res.status(500).json(err.message)
   }
@@ -37,7 +37,7 @@ router.post('/:package_id', async (req, res) => {
     const suggestion = await db('suggestions').insert({
       name,
       type,
-      description, 
+      description,
       address,
       package_id
     })
@@ -55,11 +55,11 @@ router.put('/', async (req, res) => {
 
 /*=== DELETE SUGGESTION ===*/
 router.delete('/:id', async (req, res) => {
-  const { id } = req.params
+  const { suggestion_id } = req.params
 
   try {
     const deleted = await db('suggestions')
-      .where({ id })
+      .where({ suggestion_id })
       .del()
     res.status(204).json(deleted)
   } catch (err) {
