@@ -13,7 +13,7 @@ exports.seed = function(knex) {
         {
           city_id: 2,
           city_name: 'San Francisco',
-          description: 'Everyone here is a blue robot 💻'
+          description: 'Tech... Tech everywhere... 💻'
         },
         { city_id: 3, city_name: 'Austin', description: "Y'all means all, y'all!" }
       ])
