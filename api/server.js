@@ -12,12 +12,9 @@ const stripe = require('stripe')('sk_test_kha5ImDj5h2LzUgfR9Nit2Jx00pkmiYScQ')
 
 /*=== import routers here ===*/
 const authRouter = require('../routers/authRouter')
-<<<<<<< HEAD
-=======
 const citiesRouter = require('../routers/citiesRouter')
 const stripeRouter = require('../routers/stripeRouter')
 const packagesRouter = require('../routers/packagesRouters')
->>>>>>> 2a4a44e5244d622a37608c6e785409d9eac34d62
 
 const server = express()
 
@@ -45,11 +42,8 @@ server.post('/charge', async (req, res) => {
 
 /*=== routers implemented here ===*/
 server.use('/', authRouter)
-<<<<<<< HEAD
-=======
 server.use('/cities', citiesRouter)
 server.use('/packages', packagesRouter)
 server.use('/', stripeRouter)
->>>>>>> 2a4a44e5244d622a37608c6e785409d9eac34d62
 
 module.exports = server
