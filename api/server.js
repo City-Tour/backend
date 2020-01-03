@@ -46,7 +46,7 @@ server.post('/charge', async (req, res) => {
 server.use('/', authRouter)
 server.use('/cities', citiesRouter)
 server.use('/packages', packagesRouter)
-server.use('/suggestions', authenticate, suggRouter)
+server.use('/suggestions', suggRouter)
 server.use('/', stripeRouter)
 
 module.exports = server
