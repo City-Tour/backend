@@ -7,15 +7,15 @@ exports.seed = function(knex) {
       return knex('cities').insert([
         {
           city_id: 1,
-          city_name: 'Nashville, TN',
-          description: 'Not just country music.'
+          city_name: 'Nashville',
+          description: 'Not just country music 🎸'
         },
         {
           city_id: 2,
-          city_name: 'San Francisco, CA',
-          description: 'Everyone here is a blue robot.'
+          city_name: 'San Francisco',
+          description: 'Everyone here is a blue robot 💻'
         },
-        { city_id: 3, city_name: 'Austin, TX', description: "Y'all" }
+        { city_id: 3, city_name: 'Austin', description: "Y'all means all, y'all!" }
       ])
     })
 }
