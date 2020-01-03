@@ -8,7 +8,7 @@ exports.up = function(knex) {
     tbl.string('type', 255).notNullable()
     tbl.string('description', 255).notNullable()
     tbl.string('address', 255).notNullable()
-    tbl.string('website', 255).notNullable()
+    tbl.string('website', 255)
     tbl.integer('package_id')
     tbl.foreign('package_id').references('packages.package_id')
   })
