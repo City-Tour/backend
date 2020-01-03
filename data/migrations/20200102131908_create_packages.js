@@ -3,7 +3,7 @@ exports.up = function(knex) {
     tbl.increments()
     tbl.string('name', 255).notNullable()
     tbl.string('type', 255).notNullable()
-    tbl.string('decription', 255).notNullable()
+    tbl.string('description', 255).notNullable()
     tbl.decimal('price').notNullable()
     tbl.string('city_id', 255).notNullable()
     tbl.foreign('city_id').references('cities.id')
