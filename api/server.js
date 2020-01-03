@@ -9,6 +9,7 @@ const authRouter = require('../routers/authRouter')
 const citiesRouter = require('../routers/citiesRouter')
 const stripeRouter = require('../routers/stripeRouter')
 const packagesRouter = require('../routers/packagesRouters')
+const suggRouter = require('../routers/suggestionsRouter')
 
 const server = express()
 
@@ -22,6 +23,7 @@ server.get('/', (req, res) => {
 server.use('/', authRouter)
 server.use('/cities', citiesRouter)
 server.use('/packages', packagesRouter)
+server.use('/suggestions', suggRouter)
 server.use('/', stripeRouter)
 
 module.exports = server
